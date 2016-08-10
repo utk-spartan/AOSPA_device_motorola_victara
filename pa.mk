@@ -15,14 +15,23 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+include device/qcom/common/common.mk
 
 # Inherit from victara device
 $(call inherit-product, device/motorola/victara/device.mk)
 
+# Include ParanoidAndroid common configuration
+TARGET_BOOT_ANIMATION_RES := 1080
+include vendor/pa/main.mk
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := victara
-PRODUCT_NAME := full_victara
+PRODUCT_NAME := pa_victara
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := victara
 PRODUCT_MANUFACTURER := motorola
+PRODUCT_RELEASE_NAME := MOTO X (2014)
+
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
