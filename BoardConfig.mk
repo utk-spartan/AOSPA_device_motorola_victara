@@ -128,7 +128,6 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_PROVIDES_RILD := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/motorola/victara/sepolicy
 
 # Vendor Init
