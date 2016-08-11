@@ -23,7 +23,6 @@ import android.preference.PreferenceCategory;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.cyanogenmod.internal.util.ScreenType;
 
 public class TouchscreenGestureSettings extends PreferenceActivity {
     private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
@@ -44,11 +43,7 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
-        // If running on a phone, remove padding around the listview
-        if (!ScreenType.isTablet(this)) {
-            getListView().setPadding(0, 0, 0, 0);
-        }
+		getListView().setPadding(0, 0, 0, 0);
     }
 
     @Override

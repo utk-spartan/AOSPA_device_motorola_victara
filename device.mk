@@ -116,6 +116,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.msm8974
 
+# CMActions
+PRODUCT_PACKAGES += \
+    CMActions \
+    libjni_CMActions
+
 # Charger
 PRODUCT_PACKAGES += \
     charger \
