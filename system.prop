@@ -96,3 +96,12 @@ ro.com.google.clientidbase.gmm=android-motorola
 
 # Wifi
 ro.disableWifiApFirmwareReload=true
+
+# Device
+ro.product.device=victara
+ro.product.model=XT1092
+ro.build.product=victara
+ro.build.description=victara_reteu-user 5.1 LPE23.32-25.1 1 release-keys
+ro.build.fingerprint=motorola/victara_reteu/victara:5.1/LPE23.32-25.1/1:user/release-keys
+ro.telephony.default_network=9
+telephony.lteOnGsmDevice=1
