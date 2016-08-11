@@ -13,6 +13,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+-include $(QCPATH)/common/msm8974/BoardConfigVendor.mk
+include device/qcom/common/BoardConfigCommon.mk
+
+TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/victara
+
+TARGET_USES_OVERLAY := true
+
+#Setting TARGET_HAVE_HDMI_OUT to false
+# to get rid of compilation error.
+TARGET_HAVE_HDMI_OUT := false
+
+#ADD_RADIO_FILES ?= true
+
+TARGET_HW_DISK_ENCRYPTION := false
+
+# Enable dex pre-opt to speed up initial boot
+#ifeq ($(HOST_OS),linux)
+#      WITH_DEXPREOPT := true
+#endif
+
 # inherit from the proprietary version
 -include vendor/motorola/victara/BoardConfigVendor.mk
 
@@ -49,6 +69,8 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8974
 TARGET_KERNEL_CONFIG := cyanogenmod_victara_defconfig
+# Currently unused, but may want to move some things into platform later
+TARGET_KERNEL_ARCH := arm
 
 # Audio
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
