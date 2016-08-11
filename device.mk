@@ -114,7 +114,6 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
     camera.msm8974
 
 # Charger
@@ -137,9 +136,6 @@ PRODUCT_PACKAGES += \
     libgenlock \
     memtrack.msm8974
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -260,7 +256,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
-# CMActions
-PRODUCT_PACKAGES += \
-    CMActions \
-    libjni_CMActions
