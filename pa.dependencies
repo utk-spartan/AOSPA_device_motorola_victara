@@ -18,6 +18,12 @@
         "revision":     "marshmallow-caf-8974"
     },
     {
+        "remote":       "blobs",
+        "repository":   "proprietary_vendor_motorola",
+        "target_path":  "vendor/motorola",
+        "revision":     "cm-13.0"
+    },
+    {
         "remote":       "caf",
         "repository":   "platform/hardware/qcom/keymaster",
         "target_path":  "hardware/qcom/keymaster",
