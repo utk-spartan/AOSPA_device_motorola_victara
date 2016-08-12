@@ -26,8 +26,6 @@ TARGET_HAVE_HDMI_OUT := false
 
 #ADD_RADIO_FILES ?= true
 
-TARGET_HW_DISK_ENCRYPTION := false
-
 # Enable dex pre-opt to speed up initial boot
 #ifeq ($(HOST_OS),linux)
 #      WITH_DEXPREOPT := true
