@@ -403,6 +403,7 @@ PRODUCT_PACKAGES += \
     setup_fs \
     flatland \
     vcard \
+    libqsap_sdk \
     libemoji
 
 
