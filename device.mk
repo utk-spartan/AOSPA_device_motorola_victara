@@ -274,6 +274,5 @@ PRODUCT_PACKAGES += \
     mm-video-driver-test \
     mm-video-encdrv-test \
     libemoji \
-    libmm-omxcore \
-    libstlport
+    libmm-omxcore
 
