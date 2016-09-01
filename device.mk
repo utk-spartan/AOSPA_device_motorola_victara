@@ -117,6 +117,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+	org.codeaurora.camera \
     camera.msm8974
 
 # CMActions
@@ -149,10 +150,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8974
 
-# IPv6 tethering
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -264,187 +261,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
-
-
-####################################################################################################
-
-#((PA_bacon + PA_common) - CM_bacon) - utk_victara
-
-
-####################################################################################################
-
-
+# Telephony data services
 PRODUCT_PACKAGES += \
-    libangle \
-    tinyplay \
-    tinycap \
-    tinypcminfo \
-    cplay \
-    amploader \
-    QualcommSoftAP \
-    TSCalibration \
-    brctl \
-    libbridge \
-    javax.btobex \
-    libattrib_static \
-    libcimax_spi \
-    services-ext \
-    curl \
-    rmnetcli \
-    e2fsck \
-    libebtc \
-    gps.conf \
-    libloc_adapter \
-    libgps.utils \
-    libloc_eng \
-    libloc_api_v02 \
-    libloc_ds_api \
-    libloc_core \
-    hdmid \
-    hostapd_cli \
-    nt_password_hash \
-    hlr_auc_gw \
-    test-milenage \
-    hostapd.conf \
-    libI420colorconvert \
-    ip \
-    libiprouteutil \
-    libiptc \
-    libext \
-    iptables \
-    ks \
-    qcks \
-    efsks \
-    gralloc.default \
-    libmemalloc \
-    memtrack.default \
-    libaudioparameter \
-    libopencorehw \
-    overlay.default \
-    org.codeaurora.Performance \
-    libQcomUI \
-    libqdutils \
-    libqdMetaData \
-    libloc_api-rpc-qc \
-    media_profiles.xml \
-    libOmxAacDec \
-    libOmxMp3Dec \
-    libOmxAc3HwDec \
-    libmm-omxcore \
-    ast-mm-vdec-omx-test \
-    libavenhancements \
-    liblasic \
-    libOmxVdecHevc \
-    libOmxVidEnc \
-    mm-vdec-omx-property-mgr \
+    libqsap_sdk \
+    libQWiFiSoftApCfg \
+    Stk
+
+# Misc.
+PRODUCT_PACKAGES += \
     mm-vdec-omx-test \
-    mm-venc-omx-test \
     mm-venc-omx-test720p \
     mm-video-driver-test \
     mm-video-encdrv-test \
-    libomx_aacdec_sharedlibrary \
-    libomx_amrdec_sharedlibrary \
-    libomx_amrenc_sharedlibrary \
-    libomx_avcdec_sharedlibrary \
-    libomx_m4vdec_sharedlibrary \
-    libomx_mp3dec_sharedlibrary \
-    libomx_sharedlibrary \
-    libopencore_author \
-    libopencore_common \
-    libopencore_download \
-    libopencore_downloadreg \
-    libopencore_mp4local \
-    libopencore_mp4localreg \
-    libopencore_net_support \
-    libopencore_player \
-    libopencore_rtsp \
-    libopencore_rtspreg \
-    libpvdecoder_gsmamr \
-    libpvplayer_engine \
-    libpvamrwbdecoder \
-    libpvauthorengine \
-    libomx_amr_component_lib \
-    pvplayer \
-    pvplayer_engine_test \
-    ip-up-vpn \
-    libqcomm_omx \
-    01_qcomm_omx \
-    RemoTI_RNP.cfg \
-    rf4ce \
-    sensors.msm7630_surf \
-    sensors.msm7630_fusion \
-    libQWiFiSoftApCfg \
-    Stk \
-    libstm-log \
-    corgi \
-    dejitter \
-    inputraw \
-    linear \
-    variance \
-    pthres \
-    libtslib \
-    tsprint \
-    tstest \
-    tsutils \
-    tscalib \
-    ts \
-    wpa_supplicant_wcn.conf \
-    01_qcomm_omxf \
-    wpa_supplicant_ath6kl.conf \
-    gzip \
-    minigzip \
-    libunz \
-    libvt_jni \
-    libimscamera_jni \
-    qti_permissions.xml \
-    imssettings \
-    init.crda.sh \
-    make_ext4fs \
-    setup_fs \
-    flatland \
-    vcard \
-    libqsap_sdk \
-    libemoji
+    libemoji \
+    libmm-omxcore \
+    libstlport
 
-
-#ALSA
-ALSA_HARDWARE += alsa.msm8974
-
-
-AUDIO_POLICY += audio_policy.conf
-
-#INIT
-INIT += init.qcom.modem_links.sh
-INIT += init.qcom.early_boot.sh
-INIT += init.qcom.post_boot.sh
-INIT += init.qcom.usb.sh
-INIT += ssr_setup
-INIT += enable_swap.sh
-
-
-#LIBCAMERA
-LIBCAMERA += libcamera
-LIBCAMERA += libmmcamera_interface
-LIBCAMERA += libmmcamera_interface2
-LIBCAMERA += libmmjpeg_interface
-LIBCAMERA += libqomx_core
-LIBCAMERA += mm-qcamera-app
-LIBCAMERA += camera_test
-LIBCAMERA += org.codeaurora.camera
-
-#LIBLIGHTS
-LIBLIGHTS += lights.qcom
-
-PRODUCT_PACKAGES += $(ALSA_HARDWARE)
-PRODUCT_PACKAGES += $(AUDIO_HARDWARE)
-PRODUCT_PACKAGES += $(AUDIO_POLICY)
-PRODUCT_PACKAGES += $(INIT)
-PRODUCT_PACKAGES += $(LIBCAMERA)
-PRODUCT_PACKAGES += $(LIBCOPYBIT)
-PRODUCT_PACKAGES += $(LIBLIGHTS)
-PRODUCT_PACKAGES += $(LIBHWCOMPOSER)
-
-
-PRODUCT_PACKAGES += $(KERNEL_TESTS)
-PRODUCT_PACKAGES += $(LIBPOWER)
-PRODUCT_PACKAGES += $(UPDATER)
