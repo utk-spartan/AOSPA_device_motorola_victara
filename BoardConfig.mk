@@ -27,9 +27,9 @@ TARGET_HAVE_HDMI_OUT := false
 #ADD_RADIO_FILES ?= true
 
 # Enable dex pre-opt to speed up initial boot
-#ifeq ($(HOST_OS),linux)
-#      WITH_DEXPREOPT := true
-#endif
+ifeq ($(HOST_OS),linux)
+      WITH_DEXPREOPT := true
+endif
 
 # inherit from the proprietary version
 -include vendor/motorola/victara/BoardConfigVendor.mk
@@ -51,9 +51,14 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 CLANG_O3 := true
 STRICT_ALIASING := false
 KRAIT_TUNINGS := true
-GRAPHITE_OPTS := false
+GRAPHITE_OPTS := true
 ENABLE_GCCONLY := false
 USE_PIPE := true
+#ENABLE_GNU11=true
+#ENABLE_LTO=true
+#FFAST_MATH=true
+USE_O3_OPTIMIZATIONS=true
+FLOOP_NEST_OPTIMIZE=true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
