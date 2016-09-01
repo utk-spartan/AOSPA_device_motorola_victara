@@ -80,7 +80,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8974
-TARGET_KERNEL_CONFIG := cyanogenmod_victara_defconfig
+TARGET_KERNEL_CONFIG := AOSPA_victara_defconfig
 # Currently unused, but may want to move some things into platform later
 TARGET_KERNEL_ARCH := arm
 
