@@ -27,9 +27,9 @@ TARGET_HAVE_HDMI_OUT := false
 #ADD_RADIO_FILES ?= true
 
 # Enable dex pre-opt to speed up initial boot
-ifeq ($(HOST_OS),linux)
-      WITH_DEXPREOPT := true
-endif
+#ifeq ($(HOST_OS),linux)
+#      WITH_DEXPREOPT := true
+#endif
 
 # inherit from the proprietary version
 -include vendor/motorola/victara/BoardConfigVendor.mk
