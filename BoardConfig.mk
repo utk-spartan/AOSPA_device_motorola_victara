@@ -14,7 +14,7 @@
 # limitations under the License.
 
 -include $(QCPATH)/common/msm8974/BoardConfigVendor.mk
-include device/qcom/common/BoardConfigCommon.mk
+-include device/qcom/common/BoardConfigCommon.mk
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/victara
 
