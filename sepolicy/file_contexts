@@ -22,14 +22,14 @@
 /cache/pds                              u:object_r:pds_file:s0
 /pds(/.*)?                              u:object_r:pds_file:s0
 
-/sys/class/leds/lcd-backlight/brightness        u:object_r:sysfs_light:s0
+#/sys/class/leds/lcd-backlight/brightness        u:object_r:sysfs_light:s0
 /sys/devices/fd510000.gpio/gpio/gpio79(/.*)?    u:object_r:sysfs_adspd:s0
 /sys/devices/fd510000.gpio/gpio/gpio124(/.*)?   u:object_r:sysfs_adspd:s0
 /sys/devices/fd510000.gpio/gpio/gpio125(/.*)?   u:object_r:sysfs_adspd:s0
 /sys/devices/f9924000.i2c/i2c-2/2-0048(/.*)?    u:object_r:sysfs_thermal:s0
 /sys/devices/fd510000.gpio/gpio/gpio144(/.*)?   u:object_r:sysfs_thermal:s0
 /sys/devices/qpnp-charger-ed24c400(/.*)?        u:object_r:sysfs_thermal:s0
-/sys/power/autosleep                            u:object_r:sysfs_power:s0
+#/sys/power/autosleep                            u:object_r:sysfs_power:s0
 /sys/vibrator/pwmvalue                          u:object_r:vibeamp_sysfs:s0
 
 /system/bin/adspd                       u:object_r:adspd_exec:s0
