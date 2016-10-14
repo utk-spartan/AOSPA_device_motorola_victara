@@ -14,7 +14,7 @@
 # limitations under the License.
 
 -include $(QCPATH)/common/msm8974/BoardConfigVendor.mk
-include device/qcom/common/BoardConfigCommon.mk
+-include device/qcom/common/BoardConfigCommon.mk
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/victara
 
@@ -101,7 +101,8 @@ BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
-COMMON_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
+BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
+TARGET_ALLOW_TEXT_RELOCATIONS := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Display
@@ -151,13 +152,15 @@ TARGET_POWERHAL_VARIANT := qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
+TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Ril
-BOARD_PROVIDES_LIBRIL := true
-BOARD_PROVIDES_RILD := true
+BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11
+BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_11
+TARGET_RIL_VARIANT := caf
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/motorola/victara/sepolicy

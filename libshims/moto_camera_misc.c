@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project <http://www.cyanogenmod.org>
+ * Copyright (C) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,17 +14,10 @@
  * limitations under the License.
  */
 
-#ifndef _BDROID_BUILDCFG_H
-#define _BDROID_BUILDCFG_H
+/* TODO: Actually provide implementations for these function! */
 
-#define BTM_DEF_LOCAL_NAME              "Moto X 2014"
-#define BLUETOOTH_QTI_SW                TRUE
-// skips conn update at conn completion
-#define BTA_BLE_SKIP_CONN_UPD  TRUE
-// Enables interleaved scan
-#define BTA_HOST_INTERLEAVE_SEARCH TRUE
+//libjustshoot.so
+void _ZN7android10MediaCodec12CreateByTypeERKNS_2spINS_7ALooperEEEPKcbPii() {}
 
-/* Defined if the kernel does not have support for CLOCK_BOOTTIME_ALARM */
-#define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
-
-#endif
+//libjscore.so
+void _ZN7android11AudioSourceC1E14audio_source_tRKNS_8String16Ejjj() {}

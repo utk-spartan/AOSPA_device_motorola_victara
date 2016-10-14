@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project <http://www.cyanogenmod.org>
+ * Copyright (c) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,17 +14,18 @@
  * limitations under the License.
  */
 
-#ifndef _BDROID_BUILDCFG_H
-#define _BDROID_BUILDCFG_H
+package com.cyanogenmod.settings.device;
 
-#define BTM_DEF_LOCAL_NAME              "Moto X 2014"
-#define BLUETOOTH_QTI_SW                TRUE
-// skips conn update at conn completion
-#define BTA_BLE_SKIP_CONN_UPD  TRUE
-// Enables interleaved scan
-#define BTA_HOST_INTERLEAVE_SEARCH TRUE
+import android.os.Bundle;
 
-/* Defined if the kernel does not have support for CLOCK_BOOTTIME_ALARM */
-#define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
+import com.android.settingslib.drawer.SettingsDrawerActivity;
 
-#endif
+public class TouchscreenGesturePreferenceActivity extends SettingsDrawerActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, new TouchscreenGesturePreferenceFragment()).commit();
+    }
+}
