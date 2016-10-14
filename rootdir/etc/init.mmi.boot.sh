@@ -118,3 +118,9 @@ if [ -e /dev/vfsspi ]
 then
 	setprop ro.mot.hw.fingerprint 1
 fi
+# Create /persist/alarm if necessary
+if [ ! -d /persist/alarm ]; then
+    mkdir /persist/alarm
+    chown system:system /persist/alarm
+    restorecon /persist/alarm
+fi
