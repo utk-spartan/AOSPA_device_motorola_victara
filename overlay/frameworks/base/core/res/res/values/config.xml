@@ -368,5 +368,8 @@
         format is UMTS|LTE|... -->
    <string translatable="false" name="config_radio_access_family">GSM|WCDMA|CDMA|LTE|EVDO</string>
 
+   <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
+   <bool name="config_useRoundIcon">true</bool>
+
 </resources>
 
