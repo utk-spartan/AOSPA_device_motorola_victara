@@ -20,6 +20,7 @@ $(call inherit-product, vendor/motorola/victara/victara-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay_pixel_ui
 
 # Permissions
 PRODUCT_COPY_FILES += \

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <add-resource type="color" name="material_pixel_primary_dark_material_dark"/>
+    <color name="material_pixel_primary_dark_material_dark">#242424</color><!--Pixel Statusbar Color-->
+	<add-resource type="color" name="material_pixel_blue_dark"/>
+    <color name="material_pixel_blue_dark">#2D2D2D</color><!-- Pixel Primary Color-->
+	<add-resource type="color" name="material_pixel_blue_light"/>
+    <color name="material_pixel_blue_light">#3A3A3A</color><!-- Pixel Secondary Color-->
+	<add-resource type="color" name="material_pixel_blue_bright"/>
+    <color name="material_pixel_blue_bright">#4285F4</color><!-- Pixel Accent Color-->
+	
+	
+    <color name="highlighted_text_dark">@color/material_pixel_blue_bright</color>
+    <color name="highlighted_text_light">@color/material_pixel_blue_bright</color>
+    <color name="link_text_dark">@color/material_pixel_blue_bright</color>
+    <color name="link_text_light">@color/material_pixel_blue_bright</color>
+	<color name="system_notification_accent_color">@color/material_pixel_blue_bright</color>
+	<color name="user_icon_1">@color/material_pixel_blue_bright</color><!-- cyan 500 -->
+    <color name="user_icon_2">@color/material_pixel_blue_bright</color><!-- indigo 500 -->
+    <color name="user_icon_3">@color/material_pixel_blue_bright</color><!-- blue 500 -->
+    <color name="user_icon_4">@color/material_pixel_blue_bright</color><!-- pink 500 -->
+    <color name="user_icon_5">@color/material_pixel_blue_bright</color><!-- green 500 -->
+    <color name="user_icon_6">@color/material_pixel_blue_bright</color><!-- light green 500 -->
+    <color name="user_icon_7">@color/material_pixel_blue_bright</color><!-- orange 500 -->
+    <color name="user_icon_8">@color/material_pixel_blue_bright</color><!-- deep orange 500 -->
+	<color name="Teal_700">@color/material_pixel_blue_light</color>
+    <color name="Teal_800">@color/material_pixel_blue_dark</color>
+    <color name="Blue_700">@color/material_pixel_blue_light</color>
+    <color name="Blue_800">@color/material_pixel_blue_dark</color>
+    <color name="Indigo_700">@color/material_pixel_blue_light</color>
+    <color name="Indigo_800">@color/material_pixel_blue_dark</color>
+    <color name="Purple_700">@color/material_pixel_blue_light</color>
+    <color name="Purple_800">@color/material_pixel_blue_dark</color>
+    <color name="Pink_700">@color/material_pixel_blue_light</color>
+    <color name="Pink_800">@color/material_pixel_blue_dark</color>
+    <color name="Red_700">@color/material_pixel_blue_light</color>
+    <color name="Red_800">@color/material_pixel_blue_dark</color>
+</resources>
+
