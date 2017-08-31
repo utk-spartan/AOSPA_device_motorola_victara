@@ -87,7 +87,7 @@ media.stagefright.less-secure=true
 ro.com.google.clientidbase.gmm=android-motorola
 
 # Storage
-ro.sys.sdcardfs=true
+ro.sys.sdcardfs=false
 
 # Wifi
 ro.disableWifiApFirmwareReload=true
